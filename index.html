@@ -2,73 +2,356 @@
 <html>
 
 <head>
-  <title> dreamSACCO</title>
+  <title>DreamSacco</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
-  
+  <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Inter:400,500,600' rel='stylesheet' type='text/css'>
+
   <style>
-    .menu-index {
-      color: rgb(255, 255, 255) !important;
-      opacity: 1 !important;
-      font-weight: 700 !important;
+    :root {
+      --primary: #0D47A1;
+      --secondary: #1976D2;
+      --bg-light: #F7FAFC;
+      --text-dark: #1a1a2e;
+      --text-muted: #5a6478;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-light);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    .navbar {
+      background: var(--primary);
+      padding: 18px 40px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(13, 71, 161, 0.25);
+    }
+
+    .navbar i {
+      font-size: 20px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 20px 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 640px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      margin-top: 24px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* CONTENT WRAPPER */
+    .wrapper {
+      max-width: 960px;
+      margin: -50px auto 0;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2 i {
+      font-size: 20px;
+      color: var(--secondary);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15.5px;
+    }
+
+    /* FEATURE GRID */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .feature {
+      background: var(--bg-light);
+      border-radius: 16px;
+      padding: 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(13, 71, 161, 0.12);
+    }
+
+    .feature .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(13, 71, 161, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .feature .icon-circle i {
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    /* TECH STACK */
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .tech-pill {
+      background: var(--bg-light);
+      border: 1px solid #dde3ec;
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    /* TEAM */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .team-member {
+      text-align: center;
+      padding: 20px 12px;
+      background: var(--bg-light);
+      border-radius: 16px;
+    }
+
+    .team-member .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0 auto 12px;
+    }
+
+    .team-member p {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      font-size: 13.5px;
     }
   </style>
 </head>
 
 <body>
-  <div class="menu-container">
-    <div style="background:#333; padding:15px; color:white; font-size:20px; font-weight:bold;">
-      dreamSACCO
+
+  <div class="navbar">
+    <i class="fas fa-piggy-bank"></i> DreamSacco
+  </div>
+
+  <div class="hero">
+    <h1>DreamSacco</h1>
+    <p>A modern, digital solution transforming traditional Ugandan savings groups (SACCOs) into a transparent, disciplined, and efficient experience for youth.</p>
+    <div class="tagline">Group 14 · Makerere University</div>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="card">
+      <h2><i class="fas fa-exclamation-circle"></i>The Problem</h2>
+      <p>Many young people struggle to maintain consistent saving habits due to messy, manual record-keeping in notebooks or WhatsApp groups. Lack of transparency around group funds, disputes over who has paid, and the complexity of calculating loans and interest all make traditional SACCOs slow, error-prone, and hard to trust.</p>
     </div>
-  </div>
-  <div class="content-container">
-    <div class="content">
-      <div class="content-table flex-column">
-<div class= "flex-row">
-  <div class= "flex-item flex-column">
-    <h1>dreamSACCO</h1>
-    <p class="text">DreamSacco is a modern and didgital solution that is designed to transform traditional saving groups(SACCOs) into a transparent, disciplined and efficicent experience for the youth in Uganda.</p>
-    <hr>
 
-    <h2>The Problem</h2>
-    <p class= "text"> Many young people struggle to maintain consistent saving habits due to manual and messy record keeping in notebooks, lack of transparency regarding funds and the complexity of management of loans and calculation of interests.</p>
-    <hr>
-
-    <h2> Key Features...</h2>
-    <p class= "text">Private and public savings groups. Automated contribution tracking, a transparent real-time dashboard, an intelligent credit scoring engine. Contribution streak tracking. Multi-factor authentication on sensitive actions. Goal setting with progress tracking.</p>
-    <p class= "text">Authentication and Security: Multi-factor authentication and secure OTP verification.</p>
-    <p class= "text">Smart Loan System: Automated loan request flows and repayment schedules ranked by credit score.</p>
-    <p class= "text">Goal Tracking: Visual progress bars ad milestone notifications to keep users motivated.</p>
-    <hr>
-
-
-    <h2>Technologies</h2>
-    <p class= "text">Flutter, Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging.</p>
-    <hr>
-
-    <h2>Our Team: </h2>
-    <p class="text">Nyerere Shantinah<br>
-    Luutu Rahma Namayanja<br>
-    Kaggwa Kenan<br>
-    Tamara Alice Nazziwa<br>
-    Opus Kimberly Miracle</p>
-  
-  </div>
-</div>
-  </div>
-  <div class="footer-container">
-    <div style="background:#333; padding:15px; color:white; text-align:center;">
-      Group 14 &copy; 2025 | Makerere University
+    <div class="card">
+      <h2><i class="fas fa-lightbulb"></i>The Solution</h2>
+      <p>DreamSacco takes everything that works about traditional savings groups — collective power, shared accountability — and fixes what doesn't. Every contribution, loan, and group decision is tracked digitally, transparently, and in real time, so members can trust the numbers without trusting each other's memory.</p>
     </div>
+
+    <div class="card">
+      <h2><i class="fas fa-star"></i>Key Features</h2>
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-users"></i></div>
+          <h3>Private & Public Groups</h3>
+          <p>Create or join savings groups, with admin approval flows and credit-score risk flags on every join request.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+          <h3>Transparency Dashboard</h3>
+          <p>Real-time group balance, goal progress, and a clear view of who has paid this month.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-brain"></i></div>
+          <h3>Credit Scoring Engine</h3>
+          <p>An intelligent scoring system based on contribution consistency and repayment history determines loan limits and interest rates.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>Smart Loan System</h3>
+          <p>Automated loan requests, auto-generated repayment schedules, and admin approval — ranked by credit score.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-flag-checkered"></i></div>
+          <h3>Goal Tracking</h3>
+          <p>Visual progress bars, milestone celebrations, and a What-If Calculator to project savings growth.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+          <h3>Secure by Design</h3>
+          <p>Firebase Authentication with OTP verification and multi-factor checks on sensitive actions.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-bell"></i></div>
+          <h3>Real-Time Notifications</h3>
+          <p>Stay updated on join approvals, loan status, and group activity as it happens.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon-circle"><i class="fas fa-pie-chart"></i></div>
+          <h3>Share-Based Groups</h3>
+          <p>Groups can be structured around percentage-based shares, with contribution scaled to ownership.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><i class="fas fa-code"></i>Technologies</h2>
+      <div class="tech-pills">
+        <span class="tech-pill">Flutter</span>
+        <span class="tech-pill">Firebase Authentication</span>
+        <span class="tech-pill">Cloud Firestore</span>
+        <span class="tech-pill">Firebase Cloud Messaging</span>
+        <span class="tech-pill">Dart</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><i class="fas fa-user-friends"></i>Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="avatar">N</div>
+          <p>Nyerere Shantinah</p>
+        </div>
+        <div class="team-member">
+          <div class="avatar">L</div>
+          <p>Luutu Rahma Namayanja</p>
+        </div>
+        <div class="team-member">
+          <div class="avatar">K</div>
+          <p>Kaggwa Kenan</p>
+        </div>
+        <div class="team-member">
+          <div class="avatar">T</div>
+          <p>Tamara Alice Nazziwa</p>
+        </div>
+        <div class="team-member">
+          <div class="avatar">O</div>
+          <p>Opus Kimberly Miracle</p>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <div class="footer">
+    Group 14 &copy; 2025 | Makerere University
+  </div>
+
 </body>
 
 </html>
