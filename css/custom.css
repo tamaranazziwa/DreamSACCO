@@ -69,9 +69,10 @@ h1.hero-title, h2, h3 {
   background: white !important;
   border-radius: 20px !important;
   padding: 36px 40px !important;
-  margin: 0 auto 24px !important;
-  max-width: 880px !important;
+  margin: 0 0 24px !important;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .section-block h2 {
@@ -243,12 +244,4 @@ p.text {
   font-weight: 600 !important;
   color: #1a1a2e !important;
   margin: 0 !important;
-}
-.section-block {
-  background: white !important;
-  border-radius: 20px !important;
-  padding: 36px 40px !important;
-  margin: 0 auto 24px !important;
-  max-width: 880px !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
 }
