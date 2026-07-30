@@ -11,6 +11,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
@@ -27,49 +28,123 @@
 <body>
   <div class="menu-container"></div>
 
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <i class="fas fa-piggy-bank hero-icon"></i>
+      <h1 class="hero-title">DreamSacco</h1>
+      <p class="hero-subtitle">Turning traditional savings groups into a transparent, disciplined, digital experience for Ugandan youth.</p>
+      <a href="https://github.com/kkenan26/dreamsacco" target="_blank" class="hero-button">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </div>
+
   <div class="content-container">
     <div class="content">
       <div class="content-table flex-column">
 
+        <!-- PROBLEM -->
         <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h1>DreamSacco</h1>
-            <p class="text">DreamSacco is a modern, digital solution designed to transform traditional savings groups (SACCOs) into a transparent, disciplined, and efficient experience for Ugandan youth.</p>
-            <hr>
-
-            <h2>The Problem</h2>
+          <div class="flex-item flex-column section-block">
+            <h2><i class="fas fa-exclamation-circle section-icon"></i>The Problem</h2>
             <p class="text">Many young people struggle to maintain consistent saving habits due to manual, messy record-keeping in notebooks or WhatsApp groups. Lack of transparency around group funds and the complexity of managing loans and interest calculations make traditional SACCOs slow and hard to trust.</p>
-            <hr>
+          </div>
+        </div>
 
-            <h2 id="features">Key Features</h2>
-            <p class="text"><b>Group Management:</b> Create private or public savings groups, with admin approval flows and credit-score risk flags on every join request.</p>
-            <p class="text"><b>Transparency Dashboard:</b> Real-time group balance, goal progress, and a clear view of who has paid this month.</p>
-            <p class="text"><b>Credit Scoring Engine:</b> An intelligent scoring system based on contribution consistency and repayment history determines loan limits and interest rates.</p>
-            <p class="text"><b>Smart Loan System:</b> Automated loan requests, auto-generated repayment schedules, and admin approval — ranked by credit score.</p>
-            <p class="text"><b>Goal Tracking:</b> Visual progress bars, milestone celebrations, and a What-If Calculator to project savings growth.</p>
-            <p class="text"><b>Security:</b> Firebase Authentication with OTP verification and multi-factor checks on sensitive actions.</p>
-            <hr>
+        <!-- FEATURES -->
+        <div class="flex-row">
+          <div class="flex-item flex-column section-block" id="features">
+            <h2><i class="fas fa-star section-icon"></i>Key Features</h2>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3>Group Management</h3>
+                <p>Create private or public savings groups with admin approval flows and credit-score risk flags.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h3>Transparency Dashboard</h3>
+                <p>Real-time group balance, goal progress, and a clear view of who has paid this month.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-brain feature-icon"></i>
+                <h3>Credit Scoring Engine</h3>
+                <p>Contribution consistency and repayment history determine loan limits and interest rates.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-hand-holding-usd feature-icon"></i>
+                <h3>Smart Loan System</h3>
+                <p>Automated requests, auto-generated repayment schedules, and admin approval.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-flag-checkered feature-icon"></i>
+                <h3>Goal Tracking</h3>
+                <p>Visual progress bars, milestone celebrations, and a What-If savings calculator.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Secure by Design</h3>
+                <p>Firebase Authentication with OTP verification on sensitive actions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <h2 id="how-it-works">How It Works</h2>
-            <p class="text">1. Create or join a savings group, private or public.</p>
-            <p class="text">2. Contribute monthly straight from the app via MTN MoMo.</p>
-            <p class="text">3. Build your credit score through consistent contributions and repayments.</p>
-            <p class="text">4. Request loans with auto-generated repayment schedules.</p>
-            <p class="text">5. Track group and personal goals together in real time.</p>
-            <hr>
+        <!-- HOW IT WORKS -->
+        <div class="flex-row">
+          <div class="flex-item flex-column section-block" id="how-it-works">
+            <h2><i class="fas fa-list-ol section-icon"></i>How It Works</h2>
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div><h3>Create or Join a Group</h3><p>Start a private or public savings group, or join one via invite.</p></div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div><h3>Contribute Monthly</h3><p>Pay straight from the app via MTN MoMo, tracked automatically.</p></div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div><h3>Build Your Credit Score</h3><p>Consistency unlocks higher loan limits and better rates.</p></div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div><h3>Request & Repay Loans</h3><p>Get an auto-generated schedule and track it to completion.</p></div>
+              </div>
+              <div class="step">
+                <div class="step-number">5</div>
+                <div><h3>Track Progress Together</h3><p>Watch goals grow and celebrate milestones as a group.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <h2>Technologies</h2>
-            <p class="text">Flutter, Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging.</p>
-            <hr>
+        <!-- TECH -->
+        <div class="flex-row">
+          <div class="flex-item flex-column section-block">
+            <h2><i class="fas fa-code section-icon"></i>Technologies</h2>
+            <div class="tech-pills">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Firebase Authentication</span>
+              <span class="tech-pill">Cloud Firestore</span>
+              <span class="tech-pill">Firebase Cloud Messaging</span>
+              <span class="tech-pill">Dart</span>
+            </div>
+          </div>
+        </div>
 
-            <h2 id="team">Our Team</h2>
-            <p class="text">
-              Nyerere Shantinah<br>
-              Luutu Rahma Namayanja<br>
-              Kaggwa Kenan<br>
-              Tamara Alice Nazziwa<br>
-              Opus Kimberly Miracle
-            </p>
+        <!-- TEAM -->
+        <div class="flex-row">
+          <div class="flex-item flex-column section-block" id="team">
+            <h2><i class="fas fa-user-friends section-icon"></i>Our Team</h2>
+            <div class="team-grid">
+              <div class="team-member"><div class="avatar">N</div><p>Nyerere Shantinah</p></div>
+              <div class="team-member"><div class="avatar">L</div><p>Luutu Rahma Namayanja</p></div>
+              <div class="team-member"><div class="avatar">K</div><p>Kaggwa Kenan</p></div>
+              <div class="team-member"><div class="avatar">T</div><p>Tamara Alice Nazziwa</p></div>
+              <div class="team-member"><div class="avatar">O</div><p>Opus Kimberly Miracle</p></div>
+            </div>
           </div>
         </div>
 
