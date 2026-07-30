@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title> dreamSACCO</title>
+  <title>DreamSacco</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
@@ -12,8 +12,9 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
-  
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
+
   <style>
     .menu-index {
       color: rgb(255, 255, 255) !important;
@@ -24,51 +25,59 @@
 </head>
 
 <body>
-  <div class="menu-container">
-    <div style="background:#333; padding:15px; color:white; font-size:20px; font-weight:bold;">
-      dreamSACCO
-    </div>
-  </div>
+  <div class="menu-container"></div>
+
   <div class="content-container">
     <div class="content">
       <div class="content-table flex-column">
-<div class= "flex-row">
-  <div class= "flex-item flex-column">
-    <h1>dreamSACCO</h1>
-    <p class="text">DreamSacco is a modern and didgital solution that is designed to transform traditional saving groups(SACCOs) into a transparent, disciplined and efficicent experience for the youth in Uganda.</p>
-    <hr>
 
-    <h2>The Problem</h2>
-    <p class= "text"> Many young people struggle to maintain consistent saving habits due to manual and messy record keeping in notebooks, lack of transparency regarding funds and the complexity of management of loans and calculation of interests.</p>
-    <hr>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h1>DreamSacco</h1>
+            <p class="text">DreamSacco is a modern, digital solution designed to transform traditional savings groups (SACCOs) into a transparent, disciplined, and efficient experience for Ugandan youth.</p>
+            <hr>
 
-    <h2> Key Features...</h2>
-    <p class= "text">Private and public savings groups. Automated contribution tracking, a transparent real-time dashboard, an intelligent credit scoring engine. Contribution streak tracking. Multi-factor authentication on sensitive actions. Goal setting with progress tracking.</p>
-    <p class= "text">Authentication and Security: Multi-factor authentication and secure OTP verification.</p>
-    <p class= "text">Smart Loan System: Automated loan request flows and repayment schedules ranked by credit score.</p>
-    <p class= "text">Goal Tracking: Visual progress bars ad milestone notifications to keep users motivated.</p>
-    <hr>
+            <h2>The Problem</h2>
+            <p class="text">Many young people struggle to maintain consistent saving habits due to manual, messy record-keeping in notebooks or WhatsApp groups. Lack of transparency around group funds and the complexity of managing loans and interest calculations make traditional SACCOs slow and hard to trust.</p>
+            <hr>
 
+            <h2 id="features">Key Features</h2>
+            <p class="text"><b>Group Management:</b> Create private or public savings groups, with admin approval flows and credit-score risk flags on every join request.</p>
+            <p class="text"><b>Transparency Dashboard:</b> Real-time group balance, goal progress, and a clear view of who has paid this month.</p>
+            <p class="text"><b>Credit Scoring Engine:</b> An intelligent scoring system based on contribution consistency and repayment history determines loan limits and interest rates.</p>
+            <p class="text"><b>Smart Loan System:</b> Automated loan requests, auto-generated repayment schedules, and admin approval — ranked by credit score.</p>
+            <p class="text"><b>Goal Tracking:</b> Visual progress bars, milestone celebrations, and a What-If Calculator to project savings growth.</p>
+            <p class="text"><b>Security:</b> Firebase Authentication with OTP verification and multi-factor checks on sensitive actions.</p>
+            <hr>
 
-    <h2>Technologies</h2>
-    <p class= "text">Flutter, Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging.</p>
-    <hr>
+            <h2 id="how-it-works">How It Works</h2>
+            <p class="text">1. Create or join a savings group, private or public.</p>
+            <p class="text">2. Contribute monthly straight from the app via MTN MoMo.</p>
+            <p class="text">3. Build your credit score through consistent contributions and repayments.</p>
+            <p class="text">4. Request loans with auto-generated repayment schedules.</p>
+            <p class="text">5. Track group and personal goals together in real time.</p>
+            <hr>
 
-    <h2>Our Team: </h2>
-    <p class="text">Nyerere Shantinah<br>
-    Luutu Rahma Namayanja<br>
-    Kaggwa Kenan<br>
-    Tamara Alice Nazziwa<br>
-    Opus Kimberly Miracle</p>
-  
-  </div>
-</div>
-  </div>
-  <div class="footer-container">
-    <div style="background:#333; padding:15px; color:white; text-align:center;">
-      Group 14 &copy; 2025 | Makerere University
+            <h2>Technologies</h2>
+            <p class="text">Flutter, Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging.</p>
+            <hr>
+
+            <h2 id="team">Our Team</h2>
+            <p class="text">
+              Nyerere Shantinah<br>
+              Luutu Rahma Namayanja<br>
+              Kaggwa Kenan<br>
+              Tamara Alice Nazziwa<br>
+              Opus Kimberly Miracle
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
+
+  <div class="footer-container"></div>
 </body>
 
 </html>
